@@ -1,0 +1,18 @@
+main {
+  display: flex;
+  justify-content: center;
+}
+
+main > svg{
+  position: absolute;
+  transform:scale(1.05);
+  top:2vw;
+  left:0;
+  right:0;
+}
+
+svg#Vliegendevogel{
+  transform: scale(0.2);
+  z-index: 20;
+  fill:
+}
