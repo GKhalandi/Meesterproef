@@ -1,0 +1,57 @@
+main {
+  display: flex;
+  justify-content: center;
+}
+
+main > svg{
+  position: absolute;
+  transform:scale(1.05);
+  top:2vw;
+  left:0;
+  right:0;
+}
+
+/* WOLKEN ANIMTAIE */
+g#DUBBLEWOLK{
+  animation: wolken 5s ease infinite alternate;
+  opacity: 1;
+  z-index:10;
+}
+@keyframes wolken {
+  0%{
+    transform:translate(-0em, 1em);
+    opacity: 0.3;
+  }
+  25%{
+    transform:translate(-5em, 1em);
+     opacity: 0.7;
+  }
+  50%{
+    transform:translate(-7em, 1em);
+    opacity: 0.7;
+  }
+  75%{
+    transform:translate(-5em, 1em);
+    opacity: 0.5;
+  }
+  100%{
+    transform:translate(-0em, 1em);
+    opacity: 0.3;
+  }
+}
+
+/* https://css-tricks.com/almanac/properties/t/transform-origin/ https://codepen.io/shshaw/pen/pOVKjb */
+g#Reuzenrat{
+  animation: draaien 6s cubic-bezier(.8, 0, .2, 1) infinite;
+  transform-origin: center center;
+  position: relative;
+}
+
+@keyframes draaien {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
