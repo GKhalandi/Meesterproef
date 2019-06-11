@@ -75,24 +75,60 @@ svg#Vliegendevogel{
 }
 
 /* Dinolopen  Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/animation*/
-g#TREX, g#PLANTENETER{
-  animation: Dinolopen 2s ease infinite alternate;
+g#PLANTENETER{
+  animation: Dinolopen 6s ease infinite alternate;
+  transform-origin: 30%;
 }
 
 @keyframes Dinolopen {
-  0%{
-      transform:translate(0em, 0em);
+  from{
+      transform:translate3d(0rem, 0, 0rem) rotate3d(0, 1, 0, 0deg) scale3d(1, 1, 1);
   }
   25%{
-      transform:translate(0.3em, 0em);
+      transform:translate3d(2rem, 0, 0rem) rotate3d(0, 1, 0, 0deg) scale3d(1, 1, 1);
   }
-  50%{
-      transform:translate(0.6em, 0em);
-
+  40%{
+      transform:translate3d(3rem, 0, 0rem) rotate3d(0, 1, 0, 90deg) scale3d(1.01, 1.01, 1.01);
+}
+50%{
+    transform:translate3d(3rem, 0, 0rem) rotate3d(0, 1, 0, 180deg) scale3d(1.02, 1.02, 1.02);
+}
+60%{
+    transform:translate3d(3rem, 0, 0rem) rotate3d(0, 1, 0, 90deg) scale3d(1.01, 1.01, 1.01);
+}
   75%{
-      transform:translate(0.3em, 0em);
+        transform:translate3d(2rem, 0, 0rem) rotate3d(0, 1, 0, 0deg) scale3d(1, 1, 1);
   }
-  100%{
-      transform:translate(0em, 0em);
+  to{
+      transform:translate3d(0rem, 0, 0rem) rotate3d(0, 1, 0, 0deg) scale3d(1, 1, 1);
+  }
+}
+
+g#TREX{
+  animation: reklopen 9s ease infinite alternate;
+  transform-origin: 70%;
+}
+
+@keyframes reklopen {
+  from{
+      transform:translate3d(0rem, 0, 0rem) rotate3d(0, 1, 0, 0deg) scale3d(1, 1, 1);
+  }
+  25%{
+      transform:translate3d(2rem, 0, 0rem) rotate3d(0, 1, 0, 0deg) scale3d(1, 1, 1);
+  }
+  40%{
+      transform:translate3d(3rem, 0, 0rem) rotate3d(0, 1, 0, 90deg) scale3d(1.01, 1.01, 1.01);
+}
+50%{
+    transform:translate3d(3rem, 0, 0rem) rotate3d(0, 1, 0, 180deg) scale3d(1.02, 1.02, 1.02);
+}
+60%{
+    transform:translate3d(3rem, 0, 0rem) rotate3d(0, 1, 0, 90deg) scale3d(1.01, 1.01, 1.01);
+}
+  75%{
+        transform:translate3d(2rem, 0, 0rem) rotate3d(0, 1, 0, 0deg) scale3d(1, 1, 1);
+  }
+  to{
+      transform:translate3d(0rem, 0, 0rem) rotate3d(0, 1, 0, 0deg) scale3d(1, 1, 1);
   }
 }
