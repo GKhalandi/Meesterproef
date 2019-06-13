@@ -11,6 +11,16 @@ main > svg{
   right:0;
 }
 
+p {
+  z-index:20;
+  position: absolute;
+  top: 2em;
+  text-align: justify;
+  left:50vw;
+  right:15vw;
+  font-size: 1.2em;
+}
+
 /* WOLKEN ANIMTAIE */
 g#DUBBLEWOLK{
   animation: wolken 5s ease infinite alternate;
@@ -40,10 +50,13 @@ g#DUBBLEWOLK{
   }
 }
 
+path#Waterdunner, g#Walvis2{
+    animation: water 5s ease infinite alternate;
+  }
 
 /* Water, boot  en een walvis */
 g#BootNet, path#Waterdikker, g#Walvis1{
-  animation: water 2s ease infinite alternate;
+  animation: water 3s ease infinite alternate;
 }
 
 @keyframes water {
@@ -54,36 +67,12 @@ g#BootNet, path#Waterdikker, g#Walvis1{
       transform:translate(2em, 0em);
   }
   50%{
-      transform:translate(1em, 1em);
+      transform:translate(3em, 1em);
 
   75%{
-      transform:translate(3em, 0em);
+      transform:translate(2em, 0em);
   }
   100%{
-      transform:translate(2em, 1em);
+      transform:translate(1em, 1em);
   }
 }
-
-
-path#Waterdunner, g#Walvis2{
-    animation: walvis 2s ease infinite alternate;
-  }
-
-  @keyframes walvis {
-    0%{
-        transform:translate(3em, 0em);
-    }
-    25%{
-        transform:translate(2em, 1em);
-    }
-    50%{
-        transform:translate(1em, 2em);
-
-    75%{
-        transform:translate(3em, 0em);
-    }
-    100%{
-        transform:translate(1em, 1em);
-    }
-
-  }

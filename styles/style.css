@@ -1,3 +1,7 @@
+body{
+  position: fixed;
+}
+
 main {
   display: flex;
   justify-content: center;
@@ -5,11 +9,92 @@ main {
 
 main > svg{
   position: absolute;
+  overflow:hidden;
   transform:scale(1.05);
   top:2vw;
   left:0;
   right:0;
 }
+
+
+/* p {
+  z-index:20;
+  /* position: absolute;
+  top: 2em;
+  text-align: justify;
+  left:50vw;
+  right:15vw; */
+  /* font-size: 1.2em; */
+  /* opacity:0; */
+/* }  */
+
+p.P1{
+  position: absolute;
+  top: 5em;
+  z-index: 20;
+}
+
+p.P2{
+  position: absolute;
+  top: 10em;
+  z-index: 20;
+}
+
+p.P3{
+  position: absolute;
+  top: 15em;
+  z-index: 20;
+}
+
+
+.P1.delighter{
+  transition: all .3s ease-out;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.delighter.P1.started {
+  transform: none;
+  opacity: 1;
+}
+
+.delighter.P1.started.ended {
+  border: solid red 10px;
+}
+
+
+.P2.delighter{
+  transition: all .3s ease-out;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.P2.delighter.started {
+  transform: none;
+  opacity: 1;
+}
+
+.P2.delighter.started.ended {
+  border: solid red 10px;
+}
+
+.P3.delighter{
+  transition: all .3s ease-out;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.P3.delighter.started {
+  transform: none;
+  opacity: 1;
+}
+
+.P3.delighter.started.ended {
+  border: solid red 10px;
+}
+
+
+
 
 /* WOLKEN ANIMTAIE */
 g#DUBBLEWOLK{
@@ -42,7 +127,9 @@ g#DUBBLEWOLK{
 
 
 
-/* ANIMATIE VOGEL bron: https://css-tricks.com/guide-svg-animations-smil/ */
+/* ANIMATIE VOGEL bron: https://css-tricks.com/guide-svg-animations-smil/
+https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin
+*/
 svg#Vliegendevogel{
   transform: scale(0.2) translateX(-140em) translateY(-50em);
   z-index: 20;
@@ -56,22 +143,38 @@ svg#Vliegendevogel{
   fill:#485caf;
 }
 
+
+
+
 @keyframes fly {
-  0%{
+ from{
     transform: scale(0.2) translateX(-140em) translateY(-50em);
   }
-  25%{
+  15%{
     transform: scale(0.2) translateX(-120em) translateY(-50em);
   }
-  50%{
+  25%{
     transform: scale(0.2) translateX(-50em) translateY(-40em);
   }
-  75%{
+  35%{
     transform: scale(0.2) translateX(50em) translateY(-50em);
   }
-  100%{
-    transform: scale(0.2) translateX(150em) translateY(-40em);
+  50%{
+    transform: scale(0.2) translateX(150em) translateY(-40em) rotate3d(0, 1, 0, 180deg);
   }
+  65%{
+    transform: scale(0.2) translateX(50em) translateY(-50em) rotate3d(0, 1, 0, 180deg);
+  }
+
+  75%{
+    transform: scale(0.2) translateX(-50em) translateY(-40em) rotate3d(0, 1, 0, 180deg);
+  }
+  85%{
+    transform: scale(0.2) translateX(-120em) translateY(-50em) rotate3d(0, 1, 0, 180deg);
+  }
+  to{
+     transform: scale(0.2) translateX(-140em) translateY(-50em) rotate3d(0, 1, 0, 180deg);
+   }
 }
 
 /* Dinolopen  Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/animation*/
@@ -79,6 +182,16 @@ g#PLANTENETER{
   animation: Dinolopen 6s ease infinite alternate;
   transform-origin: 30%;
 }
+
+
+.cls-24:hover{
+  fill:#d89471;
+}
+
+.cls-26:hover{
+  fill:#cd7649;
+}
+
 
 @keyframes Dinolopen {
   from{

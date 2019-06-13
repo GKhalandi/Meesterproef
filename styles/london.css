@@ -1,14 +1,26 @@
 main {
   display: flex;
   justify-content: center;
+  position: fixed;
+  overflow:hidden;
 }
 
 main > svg{
-  position: absolute;
-  transform:scale(1.05);
-  top:2vw;
+  transform:scale(0.999);
+  top:-0.5vw;
   left:0;
   right:0;
+}
+
+/* https://css-tricks.com/almanac/properties/t/text-align/ */
+p {
+  z-index:20;
+  position: absolute;
+  top: 2em;
+  text-align: justify;
+  left:50vw;
+  right:15vw;
+  font-size: 1.2em;
 }
 
 /* WOLKEN ANIMTAIE */
@@ -41,12 +53,12 @@ g#DUBBLEWOLK{
 }
 
 /* https://css-tricks.com/almanac/properties/t/transform-origin/
- https://codepen.io/shshaw/pen/pOVKjb */
-
+ https://codepen.io/shshaw/pen/pOVKjb
+ https://codepen.io/pen/?&editable=true
+ */
 g#Reuzenrat{
-  animation: draaien 6s cubic-bezier(.8, 0, .2, 1) infinite;
-  transform-origin: 1% 1%;
-  position: relative;
+  /* animation: draaien 6s cubic-bezier(.8, 0, .2, 1) infinite; */
+  transform-origin: 20%;
 }
 
 @keyframes draaien {
@@ -56,4 +68,86 @@ g#Reuzenrat{
   100% {
     transform: rotate(360deg);
   }
+}
+
+
+g#Groep1, g#Groep3{
+  animation: lopen1 2s ease infinite;
+}
+
+@keyframes lopen1 {
+  0% {
+    transform:translate(0, 0);
+  }
+  25% {
+    transform:translate(1px, 0);
+  }
+  50% {
+    transform:translate(3px, 0);
+  }
+  75% {
+    transform:translate(2px, 0);
+  }
+  100% {
+    transform:translate(0, 0);
+  }
+}
+
+
+g#Groep2{
+  animation: lopen2 2s ease infinite;
+}
+
+  @keyframes lopen2 {
+    0% {
+      transform:translate(0, 0);
+    }
+    25% {
+      transform:translate(3px, 0);
+    }
+    50% {
+      transform:translate(2px, 0);
+    }
+    75% {
+      transform:translate(3px, 0);
+    }
+    100% {
+      transform:translate(0, 0);
+    }
+}
+
+/* https://codepen.io/geoffgraham/pen/pbQakX
+https://css-tricks.com/lodge/svg/06-using-svg-svg-background-image/
+https://css-tricks.com/use-cases-fixed-backgrounds-css/
+ */
+  .WATER {
+    position: relative;
+    fill:#4ca6ff;
+    top:100vw;
+    transform:scale(1.03);
+    background-attachment: fixed;
+    background-position: bottom center;
+    background-size: cover;
+    z-index:100;
+    opacity: 0.5;
+  }
+
+
+
+.binnenkant:hover {
+    fill: #2fd37b;
+  }
+
+.vergoot{
+  animation: inzoomen 2s ease;
+}
+
+@keyframes inzoomen {
+	0%{
+		transform:scale(none);
+	}
+	100%{
+		transform:scale(200%);
+	}
+
 }
