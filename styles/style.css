@@ -5,11 +5,11 @@ body{
 main {
   display: flex;
   justify-content: center;
+  overflow:hidden;
 }
 
 main > svg{
   position: absolute;
-  overflow:hidden;
   transform:scale(1.05);
   top:2vw;
   left:0;
@@ -29,20 +29,20 @@ main > svg{
 /* }  */
 
 p.P1{
-  position: absolute;
-  top: 5em;
-  z-index: 20;
-}
-
-p.P2{
-  position: absolute;
+  position: relative;
   top: 10em;
   z-index: 20;
 }
 
+p.P2{
+  position: relative;
+  top: 20em;
+  z-index: 20;
+}
+
 p.P3{
-  position: absolute;
-  top: 15em;
+  position: relative;
+  top: 30em;
   z-index: 20;
 }
 
