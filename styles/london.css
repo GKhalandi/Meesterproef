@@ -177,18 +177,29 @@ g#DUBBLEWOLK{
  */
 
 g#Reuzenrad{
-  left:20vw;
-   transform-origin: 50%;
+   /* transform-origin: 20%; */
+   animation: draaien 2s ease infinite;
  }
 
- /* @keyframes draaien {
+
+ @keyframes draaien {
    0% {
-     ttransform-origin: 80px 80px;
+     transform:translate(1px, 0) rotate(0);
+   }
+   25% {
+     transform:translate(1px, 0) rotate(90);
+
+   }
+   50% {
+     transform:translate(3px, 0) rotate(180);
+   }
+   75% {
+     transform:translate(2px, 0) rotate(270);
    }
    100% {
-     transform-origin: 80px 80px;
+     transform:translate(0, 0) rotate(360);
    }
- } */
+ }
 
 
 g#Groep1, g#Groep3{
