@@ -10,16 +10,12 @@ main > svg{
   position: fixed;
 }
 
-/* https://css-tricks.com/almanac/properties/t/text-align/ */
-/* p {
-  z-index:20;
-  position: absolute;
-  top: 2em;
-  text-align: justify;
-  left:50vw;
-  right:15vw;
+/* https://css-tricks.com/almanac/properties/t/text-align/ https://fontstorage.com/font/mint-type/skema-pro-livro */
+p {
+  font-family: "Arial";
+  font-variant: normal;
   font-size: 1.2em;
-} */
+}
 
 p.P1{
   position: absolute;
