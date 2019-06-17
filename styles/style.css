@@ -1,6 +1,6 @@
-body{
+/* body{
   position: fixed;
-}
+} */
 
 main {
   display: flex;
@@ -9,7 +9,8 @@ main {
 }
 
 main > svg{
-  position: absolute;
+  /* position: absolute; */
+  position: fixed;
   transform:scale(1.05);
   top:2vw;
   left:0;
@@ -29,27 +30,42 @@ main > svg{
 /* }  */
 
 p.P1{
-  position: relative;
-  top: 10em;
+  position: absolute;
+  top: 40em;
   z-index: 20;
 }
 
 p.P2{
-  position: relative;
-  top: 20em;
+  position: absolute;
+  top: 80em;
   z-index: 20;
 }
 
 p.P3{
-  position: relative;
-  top: 30em;
+  position: absolute;
+  top: 120em;
+  z-index: 20;
+}
+
+p.P4{
+  position: absolute;
+  top: 100em;
+  z-index: 20;
+}
+
+div.P5{
+  position: absolute;
+  width:10em;
+  height:10em;
+  top: 200em;
   z-index: 20;
 }
 
 
+
 .P1.delighter{
-  transition: all .3s ease-out;
-  transform: translateX(-100%);
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
   opacity: 0;
 }
 
@@ -59,13 +75,15 @@ p.P3{
 }
 
 .delighter.P1.started.ended {
-  border: solid red 10px;
+  background-color: pink;
+  padding: 2em;
+  margin-right: 3.5em;
 }
 
 
 .P2.delighter{
-  transition: all .3s ease-out;
-  transform: translateX(-100%);
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
   opacity: 0;
 }
 
@@ -75,12 +93,14 @@ p.P3{
 }
 
 .P2.delighter.started.ended {
-  border: solid red 10px;
+  background-color: pink;
+  padding: 2em;
+  margin-right: 3.5em;
 }
 
 .P3.delighter{
-  transition: all .3s ease-out;
-  transform: translateX(-100%);
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
   opacity: 0;
 }
 
@@ -90,8 +110,28 @@ p.P3{
 }
 
 .P3.delighter.started.ended {
-  border: solid red 10px;
+  background-color: pink;
+  padding: 2em;
+  margin-right: 3.5em;
 }
+
+.P4.delighter{
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.P4.delighter.started {
+  transform: none;
+  opacity: 1;
+}
+
+.P4.delighter.started.ended {
+  background-color: pink;
+  padding: 2em;
+  margin-right: 3.5em;
+}
+
 
 
 
@@ -134,6 +174,7 @@ svg#Vliegendevogel{
   transform: scale(0.2) translateX(-140em) translateY(-50em);
   z-index: 20;
   animation: fly 5s ease infinite alternate;
+  position:fixed;
 }
 
 .lichaam_vogel{

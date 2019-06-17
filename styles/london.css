@@ -1,19 +1,17 @@
 main {
   display: flex;
   justify-content: center;
-  position: fixed;
   overflow:hidden;
 }
 
 main > svg{
-  transform:scale(0.999);
-  top:-0.5vw;
-  left:0;
-  right:0;
+  transform:scale(1.05);
+  top:-0.9vw;
+  position: fixed;
 }
 
 /* https://css-tricks.com/almanac/properties/t/text-align/ */
-p {
+/* p {
   z-index:20;
   position: absolute;
   top: 2em;
@@ -21,7 +19,111 @@ p {
   left:50vw;
   right:15vw;
   font-size: 1.2em;
+} */
+
+p.P1{
+  position: absolute;
+  top: 40em;
+  z-index: 200;
 }
+
+p.P2{
+  position: absolute;
+  top: 80em;
+  z-index: 200;
+}
+
+p.P3{
+  position: absolute;
+  top: 120em;
+  z-index: 200;
+}
+
+p.P4{
+  position: absolute;
+  top: 160em;
+  z-index: 200;
+}
+
+div.P5{
+  position: absolute;
+  width:10em;
+  height:10em;
+  top: 190em;
+  z-index: 200;
+}
+
+
+
+.P1.delighter{
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.delighter.P1.started {
+  transform: none;
+  opacity: 1;
+}
+
+.delighter.P1.started.ended {
+  background-color: pink;
+  padding: 2em;
+  margin-right: 3.5em;
+}
+
+
+.P2.delighter{
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.P2.delighter.started {
+  transform: none;
+  opacity: 1;
+}
+
+.P2.delighter.started.ended {
+  background-color: pink;
+  padding: 2em;
+  margin-right: 3.5em;
+}
+
+.P3.delighter{
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.P3.delighter.started {
+  transform: none;
+  opacity: 1;
+}
+
+.P3.delighter.started.ended {
+  background-color: pink;
+  padding: 2em;
+  margin-right: 3.5em;
+}
+
+.P4.delighter{
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.P4.delighter.started {
+  transform: none;
+  opacity: 1;
+}
+
+.P4.delighter.started.ended {
+  background-color: pink;
+  padding: 2em;
+  margin-right: 3.5em;
+}
+
 
 /* WOLKEN ANIMTAIE */
 g#DUBBLEWOLK{
@@ -56,19 +158,20 @@ g#DUBBLEWOLK{
  https://codepen.io/shshaw/pen/pOVKjb
  https://codepen.io/pen/?&editable=true
  */
-g#Reuzenrat{
-  /* animation: draaien 6s cubic-bezier(.8, 0, .2, 1) infinite; */
-  transform-origin: 20%;
-}
 
-@keyframes draaien {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+ g#Group_18 > #Reuzenrat{
+   /* animation: draaien 6s cubic-bezier(.8, 0, .2, 1) infinite; */
+   transform-origin: 20%;
+ }
+
+ @keyframes draaien {
+   0% {
+     transform: rotate(0);
+   }
+   100% {
+     transform: rotate(360deg);
+   }
+ }
 
 
 g#Groep1, g#Groep3{
@@ -125,10 +228,7 @@ https://css-tricks.com/use-cases-fixed-backgrounds-css/
     fill:#4ca6ff;
     top:100vw;
     transform:scale(1.03);
-    background-attachment: fixed;
-    background-position: bottom center;
-    background-size: cover;
-    z-index:100;
+    z-index:30;
     opacity: 0.5;
   }
 

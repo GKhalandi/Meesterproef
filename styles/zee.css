@@ -1,17 +1,18 @@
 main {
   display: flex;
   justify-content: center;
+  overflow:hidden;
 }
 
 main > svg{
-  position: absolute;
   transform:scale(1.05);
   top:-0.5vw;
   left:0;
   right:0;
+  position: fixed;
 }
 
-p {
+/* p {
   z-index:20;
   position: absolute;
   top: 2em;
@@ -19,7 +20,112 @@ p {
   left:50vw;
   right:15vw;
   font-size: 1.2em;
+} */
+
+p.P1{
+  position: absolute;
+  top: 40em;
+  z-index: 20;
 }
+
+p.P2{
+  position: absolute;
+  top: 80em;
+  z-index: 20;
+}
+
+p.P3{
+  position: absolute;
+  top: 120em;
+  z-index: 20;
+}
+
+p.P4{
+  position: absolute;
+  top: 100em;
+  z-index: 20;
+}
+
+div.P5{
+  position: absolute;
+  width:10em;
+  height:10em;
+  top: 200em;
+  z-index: 20;
+}
+
+
+
+.P1.delighter{
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.delighter.P1.started {
+  transform: none;
+  opacity: 1;
+}
+
+.delighter.P1.started.ended {
+  background-color: pink;
+  padding: 2em;
+  margin-right: 3.5em;
+}
+
+
+.P2.delighter{
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.P2.delighter.started {
+  transform: none;
+  opacity: 1;
+}
+
+.P2.delighter.started.ended {
+  background-color: pink;
+  padding: 2em;
+  margin-right: 3.5em;
+}
+
+.P3.delighter{
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.P3.delighter.started {
+  transform: none;
+  opacity: 1;
+}
+
+.P3.delighter.started.ended {
+  background-color: pink;
+  padding: 2em;
+  margin-right: 3.5em;
+}
+
+.P4.delighter{
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.P4.delighter.started {
+  transform: none;
+  opacity: 1;
+}
+
+.P4.delighter.started.ended {
+  background-color: pink;
+  padding: 2em;
+  margin-right: 3.5em;
+}
+
+
 
 /* WOLKEN ANIMTAIE */
 g#DUBBLEWOLK{
