@@ -12,9 +12,8 @@ main > svg{
 
 /* https://css-tricks.com/almanac/properties/t/text-align/ https://fontstorage.com/font/mint-type/skema-pro-livro */
 p {
-  font-family: "Arial";
-  font-variant: normal;
-  font-size: 1.2em;
+  font-family: "Skema Pro Livro";
+  font-size: 1em;
 }
 
 p.P1{
@@ -37,9 +36,33 @@ p.P3{
 
 p.P4{
   position: absolute;
-  top: 160em;
+  top: 159em;
   z-index: 200;
 }
+
+
+a{
+  color: white;
+  text-decoration: none;
+  font-family: "Skema Pro Livro";
+}
+
+.terug{
+  background-color: rgb(56, 56, 81);
+  top: 172em;
+  right:74.3vw;
+  padding: 15px 32px;
+  color: white;
+  position: absolute;
+  z-index: 20;
+  cursor: pointer;
+  text-align: center;
+}
+
+.terug:hover{
+  background-color: purple;
+}
+
 
 div.P5{
   position: absolute;
@@ -48,8 +71,6 @@ div.P5{
   top: 190em;
   z-index: 200;
 }
-
-
 
 .P1.delighter{
   transition: all .3s ease-in;
@@ -155,19 +176,19 @@ g#DUBBLEWOLK{
  https://codepen.io/pen/?&editable=true
  */
 
- g#Group_18 > #Reuzenrat{
-   /* animation: draaien 6s cubic-bezier(.8, 0, .2, 1) infinite; */
-   transform-origin: 20%;
+g#Reuzenrad{
+  left:20vw;
+   transform-origin: 50%;
  }
 
- @keyframes draaien {
+ /* @keyframes draaien {
    0% {
-     transform: rotate(0);
+     ttransform-origin: 80px 80px;
    }
    100% {
-     transform: rotate(360deg);
+     transform-origin: 80px 80px;
    }
- }
+ } */
 
 
 g#Groep1, g#Groep3{

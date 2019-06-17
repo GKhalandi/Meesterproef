@@ -21,6 +21,10 @@ main > svg{
   right:15vw;
   font-size: 1.2em;
 } */
+p {
+  font-family: "Skema Pro Livro";
+  font-size: 1em;
+}
 
 p.P1{
   position: absolute;
@@ -42,15 +46,53 @@ p.P3{
 
 p.P4{
   position: absolute;
-  top: 100em;
+  top: 159em;
   z-index: 20;
 }
+
+.volgende{
+  background-color: rgb(56, 56, 81);
+  top: 170em;
+  left:74.3vw;
+  padding: 15px 32px;
+  color: white;
+  position: absolute;
+  z-index: 20;
+  cursor: pointer;
+  text-align: center;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+  font-family: "Skema Pro Livro";
+}
+.volgende:hover{
+  background-color: purple;
+}
+
+.terug{
+  background-color: rgb(56, 56, 81);
+  top: 170.5em;
+  right:74.3vw;
+  padding: 15px 32px;
+  color: white;
+  position: absolute;
+  z-index: 20;
+  cursor: pointer;
+  text-align: center;
+}
+
+.terug:hover{
+  background-color: purple;
+}
+
 
 div.P5{
   position: absolute;
   width:10em;
   height:10em;
-  top: 200em;
+  top: 190em;
   z-index: 20;
 }
 
