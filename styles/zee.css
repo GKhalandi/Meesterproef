@@ -24,6 +24,7 @@ main > svg{
 p {
   font-family: "Skema Pro Livro";
   font-size: 1em;
+  color:white;
 }
 
 p.P1{
@@ -68,7 +69,7 @@ a{
   font-family: "Skema Pro Livro";
 }
 .volgende:hover{
-  background-color: purple;
+  background-color: #535375;
 }
 
 .terug{
@@ -84,7 +85,7 @@ a{
 }
 
 .terug:hover{
-  background-color: purple;
+  background-color: #535375;
 }
 
 
@@ -97,7 +98,7 @@ div.P5{
 }
 
 
-
+/* https://hansaarsman.nl/page/363/aarsman-collectie kleur van de tekstvlakken */
 .P1.delighter{
   transition: all .3s ease-in;
   transform: translateY(-100%);
@@ -110,7 +111,7 @@ div.P5{
 }
 
 .delighter.P1.started.ended {
-  background-color: pink;
+  background-color: #fc6a78;
   padding: 2em;
   margin-right: 3.5em;
 }
@@ -128,7 +129,7 @@ div.P5{
 }
 
 .P2.delighter.started.ended {
-  background-color: pink;
+  background-color: #fc6a78;
   padding: 2em;
   margin-right: 3.5em;
 }
@@ -145,7 +146,7 @@ div.P5{
 }
 
 .P3.delighter.started.ended {
-  background-color: pink;
+  background-color: #fc6a78;
   padding: 2em;
   margin-right: 3.5em;
 }
@@ -162,7 +163,7 @@ div.P5{
 }
 
 .P4.delighter.started.ended {
-  background-color: pink;
+  background-color: #fc6a78;
   padding: 2em;
   margin-right: 3.5em;
 }

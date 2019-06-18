@@ -2,6 +2,7 @@
   position: fixed;
 } */
 
+
 main {
   display: flex;
   justify-content: center;
@@ -15,6 +16,7 @@ main > svg{
   top:2vw;
   left:0;
   right:0;
+  z-index: 0;
 }
 
 
@@ -32,36 +34,56 @@ main > svg{
 p{
   font-family: "Skema Pro Livro";
   font-size: 1em;
-  color:black;
+  color:white;
+}
+
+svg.intro.delighter{
+  transform:scale(1.05);
+  top:2vw;
+  left:0;
+  right:0;
+  position: absolute;
+  top: 0em;
+  z-index: 100;
+}
+
+
+.delighter.intro.started {
+  transform: none;
+  opacity: 1;
+}
+
+.delighter.P1.intro.ended {
+    opacity: 0;
 }
 
 p.P1{
-  position: absolute;
-  top: 40em;
-  z-index: 20;
-}
-
-p.P2{
   position: absolute;
   top: 80em;
   z-index: 20;
 }
 
-p.P3{
+p.P2{
   position: absolute;
   top: 120em;
   z-index: 20;
 }
 
-p.P4{
+p.P3{
   position: absolute;
   top: 160em;
   z-index: 20;
 }
 
+p.P4{
+  position: absolute;
+  top: 200em;
+  z-index: 20;
+}
+
 .volgende{
   background-color: rgb(56, 56, 81);
-  top: 170em;
+  top: 210em;
   left:74.3vw;
   padding: 15px 32px;
   color: white;
@@ -77,20 +99,20 @@ a{
   font-family: "Skema Pro Livro";
 }
 .volgende:hover{
-  background-color: purple;
+  background-color: #535375;
 }
 
 div.P5{
   position: absolute;
   width:10em;
   height:10em;
-  top: 190em;
+  top: 230em;
   z-index: 20;
 }
 
 
 
-
+/* https://hansaarsman.nl/page/363/aarsman-collectie kleur van de tekstvlakken */
 .P1.delighter{
   transition: all .3s ease-in;
   transform: translateY(-100%);
@@ -103,7 +125,7 @@ div.P5{
 }
 
 .delighter.P1.started.ended {
-  background-color: pink;
+  background-color: #fc6a78;
   padding: 2em;
   margin-right: 3.5em;
 }
@@ -121,7 +143,7 @@ div.P5{
 }
 
 .P2.delighter.started.ended {
-  background-color: pink;
+  background-color: #fc6a78;
   padding: 2em;
   margin-right: 3.5em;
 }
@@ -138,7 +160,7 @@ div.P5{
 }
 
 .P3.delighter.started.ended {
-  background-color: pink;
+  background-color: #fc6a78;
   padding: 2em;
   margin-right: 3.5em;
 }
@@ -155,7 +177,7 @@ div.P5{
 }
 
 .P4.delighter.started.ended {
-  background-color: pink;
+  background-color: #fc6a78;
   padding: 2em;
   margin-right: 3.5em;
 }
@@ -193,6 +215,7 @@ g#DUBBLEWOLK{
     opacity: 0.3;
   }
 }
+
 
 
 
@@ -253,16 +276,6 @@ g#PLANTENETER{
   transform-origin: 30%;
 }
 
-
-.cls-24:hover{
-  fill:#d89471;
-}
-
-.cls-26:hover{
-  fill:#cd7649;
-}
-
-
 @keyframes Dinolopen {
   from{
       transform:translate3d(0rem, 0, 0rem) rotate3d(0, 1, 0, 0deg) scale3d(1, 1, 1);
@@ -313,5 +326,52 @@ g#TREX{
   }
   to{
       transform:translate3d(0rem, 0, 0rem) rotate3d(0, 1, 0, 0deg) scale3d(1, 1, 1);
+  }
+}
+
+
+/* Water en een walvis */
+path#Waterdunner_1_, path#Walvis1, path#Waterdikker_2_{
+  animation: zwemmen 3s ease infinite alternate;
+}
+
+path#Waterdikker_3_, path#Walvis2, path#Waterdikker_1_{
+    animation: zwemmen 4.4s ease infinite alternate;
+  }
+
+
+path#Waterdikker_4_, path#water_onder1, path#water_onder2{
+      animation: zwemmen 6s ease infinite alternate;
+    }
+
+    circle#scrollen{
+      animation: omlaag 3s ease infinite alternate;
+    }
+
+    @keyframes omlaag {
+      from{
+          transform:translate(0em, 0em);
+      }
+      to{
+          transform:translate(0em, -3em);
+      }
+
+    }
+
+@keyframes zwemmen {
+  0%{
+      transform:translate(1em, 1em);
+  }
+  25%{
+      transform:translate(2em, 0em);
+  }
+  50%{
+      transform:translate(3em, 1em);
+
+  75%{
+      transform:translate(2em, 0em);
+  }
+  100%{
+      transform:translate(1em, 1em);
   }
 }
