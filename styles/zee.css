@@ -29,19 +29,19 @@ p {
 
 p.P1{
   position: absolute;
-  top: 40em;
+  top: 5em;
   z-index: 20;
 }
 
 p.P2{
   position: absolute;
-  top: 80em;
+  top: 55em;
   z-index: 20;
 }
 
 p.P3{
   position: absolute;
-  top: 120em;
+  top: 110em;
   z-index: 20;
 }
 
@@ -54,7 +54,7 @@ p.P4{
 .volgende{
   background-color: rgb(56, 56, 81);
   top: 170em;
-  left:74.3vw;
+  left:74.4vw;
   padding: 15px 32px;
   color: white;
   position: absolute;
@@ -74,8 +74,8 @@ a{
 
 .terug{
   background-color: rgb(56, 56, 81);
-  top: 170.5em;
-  right:74.3vw;
+  top: 170em;
+  left:50vw;
   padding: 15px 32px;
   color: white;
   position: absolute;

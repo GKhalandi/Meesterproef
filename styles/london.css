@@ -1,7 +1,7 @@
 main {
   display: flex;
   justify-content: center;
-  overflow:hidden;
+  overflow:hidden  !important;
 }
 
 main > svg{
@@ -19,25 +19,30 @@ p {
 
 p.P1{
   position: absolute;
-  top: 40em;
+  top: 5em;
   z-index: 200;
 }
 
 p.P2{
   position: absolute;
-  top: 80em;
+  top: 55em;
   z-index: 200;
 }
 
 p.P3{
   position: absolute;
-  top: 120em;
+  top: 110em;
   z-index: 200;
 }
 
 p.P4{
   position: absolute;
   top: 159em;
+  z-index: 200;
+}
+p.P7{
+  position: absolute;
+  top: 200em;
   z-index: 200;
 }
 
@@ -50,8 +55,8 @@ a{
 
 .terug{
   background-color: rgb(56, 56, 81);
-  top: 172em;
-  right:74.3vw;
+  top: 210em;
+  left:50vw;
   padding: 15px 32px;
   color: white;
   position: absolute;
@@ -66,8 +71,8 @@ a{
 
 .inzoom{
   background-color: rgb(56, 56, 81);
-  top: 172em;
-  left:78.3vw;
+  top: 210em;
+  left:79.5vw;
   padding: 15px 32px;
   color: white;
   position: absolute;
@@ -81,25 +86,39 @@ a{
 }
 
 .vergoot{
-  animation: foto 3s ease-in;
+  opacity:1 !important;
+  animation: foto 4s ease-in-out;
 }
 
 @keyframes foto {
-  from{
-    zoom: 0%;
-  }
+  0%   100%{
 
-  to{
-    zoom: 300%;
+    transform: scale(1);
+
+  }
+  50%{
+    transform: scale(1.8);
+    top: 210em;
+
   }
 }
 
+.afbeelding{
+  opacity:0;
+  top: 221em;
+  width: 30em;
+  height: 18em;
+  position: absolute;
+  z-index: 200;
+  left: 42vw;
+  cursor:pointer;
+}
 
 div.P5{
   position: absolute;
   width:10em;
   height:10em;
-  top: 190em;
+  top: 229em;
   z-index: 200;
 }
 
@@ -168,6 +187,24 @@ div.P5{
 }
 
 .P4.delighter.started.ended {
+  background-color: #fc6a78;
+  padding: 2em;
+  margin-right: 3.5em;
+}
+
+
+.P7.delighter{
+  transition: all .3s ease-in;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.P7.delighter.started {
+  transform: none;
+  opacity: 1;
+}
+
+.P7.delighter.started.ended {
   background-color: #fc6a78;
   padding: 2em;
   margin-right: 3.5em;
@@ -279,15 +316,21 @@ g#Groep2{
     }
 }
 
-/* https://codepen.io/geoffgraham/pen/pbQakX
+/*
+Water die komt
+
+https://codepen.io/geoffgraham/pen/pbQakX
 https://css-tricks.com/lodge/svg/06-using-svg-svg-background-image/
 https://css-tricks.com/use-cases-fixed-backgrounds-css/
  */
   .WATER {
+    overflow: hidden !important;
     position: relative;
     fill:#4ca6ff;
-    top:100vw;
-    transform:scale(1.03);
+    top:60vw;
+    transform: scale(1.02);
+    left:0;
     z-index:30;
     opacity: 0.5;
+
   }
