@@ -331,11 +331,11 @@ g#TREX{
 
 
 /* Water en een walvis */
-path#Waterdunner_1_, path#Walvis1, path#Waterdikker_2_{
+path#Waterdunner_1_, g#Walvis1, path#Waterdikker_2_{
   animation: zwemmen 3s ease infinite alternate;
 }
 
-path#Waterdikker_3_, path#Walvis2, path#Waterdikker_1_{
+path#Waterdikker_3_, g#Walvis2, path#Waterdikker_1_{
     animation: zwemmen 4.4s ease infinite alternate;
   }
 
